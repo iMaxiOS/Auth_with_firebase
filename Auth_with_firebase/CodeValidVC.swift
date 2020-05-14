@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CodeValidVC: UIViewController {
     
     @IBOutlet weak var checkCodeBtn: UIButton!
     @IBOutlet weak var codeTextView: UITextView!
+    
+    public var verificationID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +23,28 @@ class CodeValidVC: UIViewController {
     }
     
     @IBAction func checkCodeButton() {
-        showMainVC()
+        guard let code = codeTextView.text else { return }
+        let credetinal = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: code)
+        
+        Auth.auth().signIn(with: credetinal) { [weak self] _, error in
+            guard let self = self else { return }
+            if error != nil {
+                self.createAlertController(with: error)
+            } else {
+                self.showMainVC()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         codeTextView.becomeFirstResponder()
+    }
+    
+    private func createAlertController(with error: Error?) {
+        let alertC = UIAlertController(title: error?.localizedDescription, message: nil, preferredStyle: .alert)
+        alertC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alertC, animated: true)
     }
     
     private func showMainVC() {

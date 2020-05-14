@@ -31,12 +31,25 @@ class PhoneNumberVC: UIViewController {
     }
     
     @IBAction func getCodeButton() {
-        showCodeValidVC()
+        verifyPhoneNumber()
     }
     
-    private func showCodeValidVC() {
+    private func verifyPhoneNumber() {
+        guard phoneNumber != nil else { return }
+        PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { verificationID, error in
+            guard let verifyId = verificationID else { return }
+            if error != nil {
+                print(error?.localizedDescription ?? "is Empty")
+            } else {
+                self.showCodeValidVC(verificationID: verifyId)
+            }
+        }
+    }
+    
+    private func showCodeValidVC(verificationID: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let dvc = storyboard.instantiateViewController(identifier: "CodeValidVC") as! CodeValidVC
+        dvc.verificationID = verificationID
         self.present(dvc, animated: true, completion: nil)
     }
     
@@ -51,7 +64,6 @@ class PhoneNumberVC: UIViewController {
     }
     
     private func configureTextField() {
-        phoneTextField.setFlag(key: .UA)
         phoneTextField.displayMode = .list
         phoneTextField.flagButtonSize = .init(width: 50, height: 50)
         phoneTextField.delegate = self
