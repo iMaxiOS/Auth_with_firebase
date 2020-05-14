@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ACBC2CD9246D477B005B9356 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CD8246D477B005B9356 /* AppDelegate.swift */; };
 		ACBC2CDB246D477B005B9356 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CDA246D477B005B9356 /* SceneDelegate.swift */; };
-		ACBC2CDD246D477B005B9356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CDC246D477B005B9356 /* ViewController.swift */; };
+		ACBC2CDD246D477B005B9356 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CDC246D477B005B9356 /* AuthVC.swift */; };
 		ACBC2CE0246D477B005B9356 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBC2CDE246D477B005B9356 /* Main.storyboard */; };
 		ACBC2CE2246D4780005B9356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBC2CE1246D4780005B9356 /* Assets.xcassets */; };
 		ACBC2CE5246D4780005B9356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBC2CE3246D4780005B9356 /* LaunchScreen.storyboard */; };
 		ACBC2CED246D4A89005B9356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACBC2CEC246D4A89005B9356 /* GoogleService-Info.plist */; };
+		ACBC2CEF246D546A005B9356 /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CEE246D546A005B9356 /* PhoneNumberVC.swift */; };
+		ACBC2CF1246D6447005B9356 /* CodeValidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CF0246D6447005B9356 /* CodeValidVC.swift */; };
+		ACBC2CF3246D7279005B9356 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC2CF2246D7279005B9356 /* MainVC.swift */; };
 		B9B27827CAD804693FFE4569 /* Pods_Auth_with_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F83B730218B8FF0703524F /* Pods_Auth_with_firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +27,15 @@
 		ACBC2CD5246D477B005B9356 /* Auth_with_firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Auth_with_firebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBC2CD8246D477B005B9356 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACBC2CDA246D477B005B9356 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ACBC2CDC246D477B005B9356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACBC2CDC246D477B005B9356 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		ACBC2CDF246D477B005B9356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACBC2CE1246D4780005B9356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACBC2CE4246D4780005B9356 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACBC2CE6246D4780005B9356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBC2CEC246D4A89005B9356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ACBC2CEE246D546A005B9356 /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
+		ACBC2CF0246D6447005B9356 /* CodeValidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeValidVC.swift; sourceTree = "<group>"; };
+		ACBC2CF2246D7279005B9356 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +82,10 @@
 				ACBC2CEC246D4A89005B9356 /* GoogleService-Info.plist */,
 				ACBC2CD8246D477B005B9356 /* AppDelegate.swift */,
 				ACBC2CDA246D477B005B9356 /* SceneDelegate.swift */,
-				ACBC2CDC246D477B005B9356 /* ViewController.swift */,
+				ACBC2CDC246D477B005B9356 /* AuthVC.swift */,
+				ACBC2CEE246D546A005B9356 /* PhoneNumberVC.swift */,
+				ACBC2CF0246D6447005B9356 /* CodeValidVC.swift */,
+				ACBC2CF2246D7279005B9356 /* MainVC.swift */,
 				ACBC2CDE246D477B005B9356 /* Main.storyboard */,
 				ACBC2CE1246D4780005B9356 /* Assets.xcassets */,
 				ACBC2CE3246D4780005B9356 /* LaunchScreen.storyboard */,
@@ -91,7 +100,6 @@
 				7BA5559F879304CB74791533 /* Pods-Auth_with_firebase.debug.xcconfig */,
 				518CFF98590F1A3DA1FC5F95 /* Pods-Auth_with_firebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,8 +219,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBC2CDD246D477B005B9356 /* ViewController.swift in Sources */,
+				ACBC2CDD246D477B005B9356 /* AuthVC.swift in Sources */,
+				ACBC2CF3246D7279005B9356 /* MainVC.swift in Sources */,
 				ACBC2CD9246D477B005B9356 /* AppDelegate.swift in Sources */,
+				ACBC2CF1246D6447005B9356 /* CodeValidVC.swift in Sources */,
+				ACBC2CEF246D546A005B9356 /* PhoneNumberVC.swift in Sources */,
 				ACBC2CDB246D477B005B9356 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

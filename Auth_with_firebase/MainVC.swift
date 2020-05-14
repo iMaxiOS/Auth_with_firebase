@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Auth_with_firebase
 //
 //  Created by Maxim Granchenko on 14.05.2020.
@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import FirebaseAuth
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    @IBAction func logOutButton() {
+        performSegue(withIdentifier: "closeSegueWithSender", sender: self)
     }
 
-
 }
-
